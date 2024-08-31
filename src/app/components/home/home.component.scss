@@ -1,0 +1,60 @@
+.progress-bar {
+    position: absolute;
+    bottom: 5px; /* Adjust as needed */
+    right: 5px;  /* Adjust as needed */
+    z-index: 10;
+}
+
+mat-card {
+    position: relative;
+    overflow: hidden;
+    max-width: 250px; /* Reduce the card width */
+    height: auto;
+}
+
+.moviedbPage{
+    padding-top: 50px;
+}
+
+.movie-card {
+    flex: 0 1 calc(25% - 16px); /* 4 cards per row with spacing */
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1) !important;
+}
+
+.image-container img {
+    max-height: 300px; /* Adjust the image height */
+    width: 100%; /* Ensure the image width covers the container */
+    object-fit: cover; /* Maintain aspect ratio while fitting the container */
+}
+
+.movie-div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /* Adjust the space between cards */
+    justify-content: center; /* Center the cards horizontally */
+}
+
+h6 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 0; /* Margin-top and margin-bottom combined */
+}
+
+@media (max-width: 1200px) {
+    .movie-card {
+        flex: 0 1 calc(33.33% - 16px); /* 3 cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-card {
+        flex: 0 1 calc(50% - 16px); /* 2 cards per row on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-card {
+        flex: 0 1 calc(100% - 16px); /* 1 card per row on extra small screens */
+    }
+}

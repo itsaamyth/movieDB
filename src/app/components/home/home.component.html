@@ -1,0 +1,36 @@
+<div class="moviedbPage" >
+    <div class="movie-div">
+        <mat-card class="movie-card" appearance="outlined" *ngFor="let movie of movieList">
+            <img mat-card-image [src]="imgURL+movie.poster_path" alt="Photo of a Shiba Inu">
+            <circle-progress
+                    [percent]="getPercentValue(movie.vote_average)" 
+                    [radius]="20"
+                    [space]="-5"
+                    [outerStrokeGradient]="true"
+                    [outerStrokeWidth]="5"
+                    [outerStrokeColor]="'#4882c2'"
+                    [outerStrokeGradientStopColor]="'#53a9ff'"
+                    [innerStrokeColor]="'#e7e8ea'"
+                    [innerStrokeWidth]="5"
+                    [title]="getPercentValue(movie.vote_average)+'%'"
+                    [showTitle]="true"
+                    [showSubtitle]="false"
+                    [animateTitle]="false"
+                    [animationDuration]="1000"
+                    [showUnits]="false"
+                    [showBackground]="false"
+                    [clockwise]="true"
+                    [startFromZero]="false"
+                    [lazy]="false"
+                    titleFontSize="15"
+                    class="progress-bar"
+                ></circle-progress>
+            <mat-card-content>
+                <h6>{{movie.title}}</h6>
+                <p>{{movie.release_date | date: 'MMM d, y'}}</p>
+            </mat-card-content>
+        </mat-card>
+        
+    </div>
+    <div *ngIf="loading">Loading...</div>
+</div>
