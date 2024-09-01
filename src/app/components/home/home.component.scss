@@ -39,6 +39,7 @@ h6 {
     font-size: 18px;
     font-weight: bold;
     margin: 10px 0 0; /* Margin-top and margin-bottom combined */
+    max-width: 80%;
 }
 
 @media (max-width: 1200px) {
@@ -49,12 +50,12 @@ h6 {
 
 @media (max-width: 768px) {
     .movie-card {
-        flex: 0 1 calc(50% - 16px); /* 2 cards per row on small screens */
+        flex: 0 1 calc(30% - 16px); /* 2 cards per row on small screens */
     }
 }
 
 @media (max-width: 480px) {
     .movie-card {
-        flex: 0 1 calc(100% - 16px); /* 1 card per row on extra small screens */
+        flex: 0 1 calc(50% - 16px); /* 1 card per row on extra small screens */
     }
 }

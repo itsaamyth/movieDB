@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ProgressBarService  } from './services/progress-bar.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'movieDB';
+  progressBarVisible$: Observable<boolean>;
+
+  constructor(private progressBarService: ProgressBarService) {
+    this.progressBarVisible$ = this.progressBarService.progressBarVisible$;
+  }
 }
