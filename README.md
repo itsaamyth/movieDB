@@ -14,7 +14,7 @@ Before you begin, ensure you have the following installed:
 
 1. **Clone the repository:**
 
-   git clone https://github.com/your-username/movie-db.git
+   git clone https://github.com/itsaamyth/movieDB
 
 2. **Navigate to the repository:**
 
